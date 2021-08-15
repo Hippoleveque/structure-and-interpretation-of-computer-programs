@@ -31,12 +31,13 @@ This file contains procedures to compute the multiplication of a real number
 
 (define (fast-mul-iter c a b)
 ; Clever multiplication as an iterative process O(1) in memory and O(log(b)) in complexity
-    (cond ((= b 0) 0)
-    ((= b 1) (+ a c))
+; Keeping a + c the same 
+    (cond ((= b 0) c)
     ((= 0 (remainder b 2)) (fast-mul-iter c (double a) (halve b)))
     (else (fast-mul-iter (+ a c) a (- b 1)))
     )
 )
+
 
 #|
 Maybe I can reduce complexity to O(log(min(a,b)))

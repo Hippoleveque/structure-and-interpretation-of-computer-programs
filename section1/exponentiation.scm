@@ -30,8 +30,7 @@ This file contains procedures to compute the exponentiation of a real number
 (define (iter-exp a b n)
 ; Clever implementation of iterative process O(1) memory O(lg(n)) complexity
 ; Keep a * b^n the same 
-    (cond ((= n 0) 1)
-    ((= n 1) (* a b))
+    (cond ((= n 0) a)
     ((= (remainder n 2) 0) (iter-exp a (square b) (/ n 2)))
     (else (iter-exp (* a b) b (- n 1)))
     )

@@ -25,3 +25,4 @@ with a limited set of coins
           ((= kinds-of-coins 4) 25)
           ((= kinds-of-coins 5) 50)
 ))
+

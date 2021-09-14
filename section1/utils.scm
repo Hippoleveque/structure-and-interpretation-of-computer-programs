@@ -14,4 +14,8 @@
 
 (define (inv x) (/ 1 x))
 
+(define (positive? x) (< 0 x))
 
+(define (negative? x) (> 0 x))
+
+(define (average x y) (/ (+ x y) 2))
